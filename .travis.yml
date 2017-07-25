@@ -111,10 +111,10 @@ matrix:
           #- ruby-2.4.1
           before_install:
           - "export DISPLAY=:99.0"
-          - curl -O http://chromedriver.storage.googleapis.com/2.31/chromedriver_mac64.zip -P ~/
-          - unzip ~/chromedriver_mac64.zip -d ~/
-          - chmod +x ~/chromedriver
-          - sudo mv -f ~/chromedriver /usr/local/share/chromedriver
+          - curl -O http://chromedriver.storage.googleapis.com/2.31/chromedriver_mac64.zip -P /tmp 
+          - unzip /tmp/chromedriver_mac64.zip -d /tmp
+          - chmod +x /tmp/chromedriver
+          - sudo mv -f /tmp/chromedriver /usr/local/share/chromedriver
           - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
           - rvm reinstall ruby-head --binary
           - gem install public_suffix -v '2.0.5'
