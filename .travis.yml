@@ -51,7 +51,7 @@ matrix:
           install: cd java/sdk/eyes.selenium.java/;mvn test
         - os: osx
           language: java
-          jdk: oraclejdk8
+          osx_image: xcode8
           env: DISPLAY=':0.0'  
           install: cd java/sdk/eyes.selenium.java/;mvn test
         - os : linux 
