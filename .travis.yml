@@ -60,6 +60,7 @@ matrix:
           install: cd java/sdk/eyes.selenium.java/;mvn test
         - os : linux 
           language: ruby
+          sudo: required
           env: DISPLAY=':0.0'  
           ruby:
           #- 1.9.3
