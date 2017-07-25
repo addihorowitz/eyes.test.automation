@@ -3,7 +3,7 @@ language:
 - java
 - generic
 - ruby
-
+sudo: required
 matrix:
     include:
         - os: linux
