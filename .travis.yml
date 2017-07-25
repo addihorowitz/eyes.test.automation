@@ -78,7 +78,7 @@ matrix:
           - chmod +x ~/chromedriver
           - sudo mv -f ~/chromedriver /usr/local/share/chromedriver
           - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-          - sudo ln -s /usr/local/share/chromedriver /usr/bin/google-chrome
+          #- sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
           - rvm reinstall ruby-head --binary
           - gem install public_suffix -v '2.0.5'
           - cd ruby/sdk/ext/eyes_core;ruby extconf.rb;make;make install
