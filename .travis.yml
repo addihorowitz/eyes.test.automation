@@ -62,7 +62,9 @@ matrix:
           sudo: required
           env: DISPLAY=':0.0'  
           dist: trusty
-          rvm: ruby-1.9.3-p551
+          rvm: 
+          - ruby-1.9.3-p551
+          - ruby-2.0.0-p648
           #ruby:
           #- ruby-1.9.3-p551
           #- ruby-2.0.0-p648
@@ -98,7 +100,7 @@ matrix:
           sudo: required
           env: DISPLAY=':0.0'
           dist: trusty
-          rvx: ruby-1.9.3-p551
+          rvm: ruby-1.9.3-p551
           #ruby:
           #- ruby-1.9.3-p551
           #- ruby-2.0.0-p648
