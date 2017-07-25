@@ -93,3 +93,39 @@ matrix:
           - bundle exec rspec images_single_example_fi_script.rb
           - bundle exec rspec capybara_example.rb
           - bundle exec rspec watir_test_script.rb
+        - os : osx
+          language: ruby
+          sudo: required
+          env: DISPLAY=':0.0'
+          dist: trusty
+          rvx: ruby-1.9.3-p551
+          #ruby:
+          #- ruby-1.9.3-p551
+          #- ruby-2.0.0-p648
+          #- ruby-2.1.6
+          #- ruby-2.3.1
+          #- rbx-2.2.7
+          #- ruby-2.4.1
+          before_install:
+          - "export DISPLAY=:99.0"
+          - "sh -e /etc/init.d/xvfb start"
+          - curl -O http://chromedriver.storage.googleapis.com/2.31/chromedriver_mac64.zip -P ~/
+          - unzip ~/chromedriver_mac64.zip -d ~/
+          - chmod +x ~/chromedriver
+          - sudo mv -f ~/chromedriver /usr/local/share/chromedriver
+          - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+          - rvm reinstall ruby-head --binary
+          - gem install public_suffix -v '2.0.5'
+          - cd ruby/sdk/ext/eyes_core;ruby extconf.rb;make;make install
+          script:
+          - cd ../..
+          - bundle install --quiet
+          - bundle exec rake rubocop
+          - cd examples
+          - bundle exec rspec check_frame_and_element_example.rb
+          - bundle exec rspec check_frame_and_element_fluent_interface_example.rb
+          - bundle exec rspec images_example_fluent_interface_script.rb
+          - bundle exec rspec images_example_script.rb
+          - bundle exec rspec images_single_example_fi_script.rb
+          - bundle exec rspec capybara_example.rb
+          - bundle exec rspec watir_test_script.rb
