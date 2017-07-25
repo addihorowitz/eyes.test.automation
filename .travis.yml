@@ -74,7 +74,7 @@ matrix:
           - gem install public_suffix -v '2.0.5'
           - cd ruby/sdk/ext/eyes_core;ruby extconf.rb;make;make install
           script:
-          - cd ruby/sdk
+          - cd ../.. 
           - bundle install
           - bundle exec rake rubocop
           - bundle exec rspec examples/check_frame_and_element_example.rb
