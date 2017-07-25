@@ -1,9 +1,6 @@
 [submodule "python/sdk"]
 	path = python/sdk
 	url = https://github.com/addihorowitz/eyes.selenium.python
-[submodule "ruby/sdk"]
-	path = ruby/sdk
-	url = https://github.com/applitools/eyes.sdk.ruby
 [submodule "java/sdk"]
 	path = java/sdk
 	url = https://github.com/addihorowitz/eyes.sdk.java3
