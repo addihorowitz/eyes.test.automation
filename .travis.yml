@@ -78,7 +78,6 @@ matrix:
           - chmod +x ~/chromedriver
           - sudo mv -f ~/chromedriver /usr/local/share/chromedriver
           - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
-          #- sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
           - rvm reinstall ruby-head --binary
           - gem install public_suffix -v '2.0.5'
           - cd ruby/sdk/ext/eyes_core;ruby extconf.rb;make;make install
@@ -87,3 +86,9 @@ matrix:
           - bundle install
           - bundle exec rake rubocop
           - bundle exec rspec examples/check_frame_and_element_example.rb
+          - bundle exec rspec examples/check_frame_and_element_fluent_interface_example.rb
+          - bundle exec rspec examples/images_example_fluent_interface_script.rb
+          - bundle exec rspec examples/images_example_script.rb
+          - bundle exec rspec examples/images_single_example_fi_script.rb
+          - bundle exec rspec examples/capybara_example.rb
+          - bundle exec rspec examples/watir_test_script.rb
