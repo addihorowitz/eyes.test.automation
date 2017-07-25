@@ -82,7 +82,7 @@ matrix:
           - cd ruby/sdk/ext/eyes_core;ruby extconf.rb;make;make install
           script:
           - cd ../.. 
-          - bundle install
+          - bundle install --quiet --without=development
           - bundle exec rake rubocop
           - cd examples
           - bundle exec rspec check_frame_and_element_example.rb
