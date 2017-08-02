@@ -71,7 +71,7 @@ matrix:
           - sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
           - rvm reinstall ruby-head --binary
           - gem install public_suffix -v '2.0.5'
-          - cd ruby; bundle install --quiet
+          - cd ruby; bundle install 
           - cd sdk/ext/eyes_core;ruby extconf.rb;make;make install
           script:
           - cd ../.. 
@@ -100,7 +100,7 @@ matrix:
           - rvm install ruby-head --binary
           - gem install public_suffix -v '2.0.5'
           - cd ruby
-          - bundle install --quietl
+          - bundle install 
           - cd sdk/ext/eyes_core;ruby extconf.rb;make;make install
           script:
           - cd ../..
