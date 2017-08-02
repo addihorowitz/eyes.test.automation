@@ -3,3 +3,4 @@ dist/*
 *.pyc
 java/.idea
 python/*.pyc
+ruby/Gemfile.lock
